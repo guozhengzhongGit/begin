@@ -1,36 +1,36 @@
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.t|jsx?$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            "presets": [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript"
-            ]
-          }
+// const { isDevelopment } = require('../tools');
+const cssRuleUse = require('./cssRule');
+// const isProd = !isDevelopment();
+
+const webpackConfig = () => {
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: cssRuleUse,
         },
-        exclude: /(node_modules)/,
-      },
-      {
-        test: /\.txt$/i,
-        use: 'raw-loader',
-      },
-      {
-        test: /\.(jpe?g|png|gif)$/i,
-        type: "asset",
-      },
-      {
-        test: /\.svg$/i,
-        use: 'file-loader',
-      },
-    ]
-  }
-}
+        {
+          test: /\.t|jsx?$/,
+          use: {
+            loader: 'babel-loader',
+          },
+          exclude: /(node_modules)/,
+        },
+        {
+          test: /\.txt$/i,
+          use: 'raw-loader',
+        },
+        {
+          test: /\.(jpe?g|png|gif)$/i,
+          type: 'asset',
+        },
+        {
+          test: /\.svg$/i,
+          use: 'file-loader',
+        },
+      ],
+    },
+  };
+};
+module.exports = webpackConfig();
