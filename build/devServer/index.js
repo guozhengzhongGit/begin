@@ -10,7 +10,8 @@ config.devServer
   .compress(false)
   .historyApiFallback({
     rewrites: [
-      { from: /^\/viewer/, to: '/viewer.html' },
+      // { from: /^\/viewer/, to: '/viewer.html' },
+      { from: /\.*/, to: '/viewer.html' },
     ]
   })
   .headers({
