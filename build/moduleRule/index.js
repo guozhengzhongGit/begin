@@ -1,6 +1,7 @@
-// const { isDevelopment } = require('../tools');
 const cssRuleUse = require('./cssRule');
-// const isProd = !isDevelopment();
+const lessRuleUse = require('./lessRule');
+const lessModuleRuleUse = require('./lessModuleRule');
+
 
 const webpackConfig = () => {
   return {
@@ -9,6 +10,15 @@ const webpackConfig = () => {
         {
           test: /\.css$/,
           use: cssRuleUse,
+        },
+        {
+          test: /\.less$/,
+          exclude: /\.module\.less$/,
+          use: lessRuleUse,
+        },
+        {
+          test: /\.module\.less$/,
+          use: lessModuleRuleUse,
         },
         {
           test: /\.t|jsx?$/,

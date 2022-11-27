@@ -1,3 +1,8 @@
 .rootOuter {
     color: red;
+    transition: all .3s;
+}
+button {
+    outline: none;
+    border: 0 none;
 }
