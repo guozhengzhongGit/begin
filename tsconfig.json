@@ -37,7 +37,7 @@
         "src/*"
       ],
       "@viewer/*": [
-        "src/pages/viewer/*"
+        "src/projects/viewer/*"
       ],
       "@public/*": [
         "src/public/*"

@@ -6,7 +6,7 @@ config.devServer
   .allowedHosts.add('all')
   .end()
   .port(7878)
-  .open('http://localhost:7878/viewer')
+  .open('http://localhost:7878')
   .compress(false)
   .historyApiFallback({
     rewrites: [

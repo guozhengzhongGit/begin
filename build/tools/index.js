@@ -7,7 +7,7 @@ const findModule = pattern => glob.sync(pattern);
 const isDevelopment = () => process.env.NODE_ENV === 'development';
 
 const getEntryNameArray = (() => {
-  const pattern = `${process.cwd()}/src/pages/**/main.tsx`;
+  const pattern = `${process.cwd()}/src/projects/**/main.tsx`;
   const reg = /.+\/(\w+)\/main\.tsx$/;
   let entryNameList = [];
   return () => {

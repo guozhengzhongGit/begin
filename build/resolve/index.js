@@ -10,7 +10,7 @@ config.resolve.alias
 
 // 页面别名
 getEntryNameArray().forEach((page) => {
-  const pageDir = resolveAppSrc(`./pages/${page}`);
+  const pageDir = resolveAppSrc(`./projects/${page}`);
   config.resolve.alias.set(`@${page}`, pageDir);
 });
 
