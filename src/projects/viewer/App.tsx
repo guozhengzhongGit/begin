@@ -69,9 +69,14 @@ function App() {
           element={Welcome}
         />
         <Route
-            path="/features/*"
+            path="/features"
             element={BaseLayout}
-        />
+        >
+          <Route
+              path={'form'}
+              element={FormComp}
+          />
+        </Route>
         <Route
           path="/reactdnd"
           element={ReactDndComp}
