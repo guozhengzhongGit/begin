@@ -8,4 +8,4 @@ function DatePickerComp () {
     )
 }
 
-export default DatePickerComp();
+export default DatePickerComp;

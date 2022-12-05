@@ -8,4 +8,4 @@ function ReactDndComp () {
     )
 }
 
-export default ReactDndComp();
+export default ReactDndComp;

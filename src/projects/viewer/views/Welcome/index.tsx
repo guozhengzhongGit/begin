@@ -6,4 +6,4 @@ function WelcomeComp () {
     )
 }
 
-export default WelcomeComp();
+export default WelcomeComp;

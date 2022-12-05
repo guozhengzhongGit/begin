@@ -8,4 +8,4 @@ function FormComp () {
     )
 }
 
-export default FormComp();
+export default FormComp;
