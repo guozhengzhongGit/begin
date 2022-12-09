@@ -9,6 +9,9 @@ const ReactDndComp = lazy(() => import('../views/react-dnd'));
 const DatePickerComp = lazy(() => import('../views/date-picker'));
 const IamgeComp = lazy(() => import('../views/img'));
 const MediaComp = lazy(() => import('../views/media'));
+import VueComp from "@viewer/views/vue";
+import ReactComp from '../views/react';
+import FrameWorkComp from '../views/framework'
 
 
 export const routerCompMap = [
@@ -47,6 +50,29 @@ export const routerCompMap = [
         icon: <UserOutlined />,
         key: 'media',
       },
+      {
+        path: 'framework',
+        element: <Suspense><FrameWorkComp /></Suspense>,
+        label: '框架',
+        icon: <UserOutlined />,
+        key: 'framework',
+        children: [
+          {
+            path: 'vue',
+            element: <Suspense><VueComp /></Suspense>,
+            label: 'vue',
+            icon: <UserOutlined />,
+            key: 'vue',
+          },
+          {
+            path: 'react',
+            element: <Suspense><ReactComp /></Suspense>,
+            label: 'react',
+            icon: <UserOutlined />,
+            key: 'react',
+          },
+        ]
+      }
     ],
   },
   {

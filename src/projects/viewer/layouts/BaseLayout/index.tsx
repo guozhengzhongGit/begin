@@ -21,11 +21,15 @@ const BaseLayout = () => {
   const [openKey, setOpenKey] = useState(() => {
     const { pathname } = location;
     const _temp = pathname.split('/').filter(item => item);
-    let result = _temp.slice(0, _temp.length - 1);
-    if (_temp.length > 1) {
-      result = result.map(item => '/' + item)
-    }
-    return result;
+    const result = _temp.slice(0, _temp.length - 1);
+    // if (_temp.length > 1) {
+    //   result = result.map(item => '/' + item)
+    // }
+    console.log(result);
+    return result.map((item, idx) => {
+      if (idx === 0) return '/' + item
+      return item
+    });
   });
   useEffect(() => {
     const { pathname } = location;
@@ -34,11 +38,13 @@ const BaseLayout = () => {
   }, [location.pathname]);
 
   const handleMenuClick = ({key, keyPath}) => {
+    console.log(key, keyPath)
     const deep = keyPath.length;
     const url = keyPath.reduceRight((pre, next) => {
       return pre + '/' + next;
     });
-    navigate(key)
+    console.log(url)
+    navigate(url)
   }
     return (
         <div className={styles.basicLayoutOuter}>
