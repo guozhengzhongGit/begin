@@ -1,11 +1,11 @@
 import React from "react";
 
-function FormComp () {
+function MediaComp () {
     return (
         <div>
-            表单
+          MediaComp
         </div>
     )
 }
 
-export default FormComp;
+export default MediaComp;

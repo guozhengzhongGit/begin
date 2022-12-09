@@ -3,7 +3,7 @@ import React from "react";
 function FormComp () {
     return (
         <div>
-            表单
+            子路由视图
         </div>
     )
 }

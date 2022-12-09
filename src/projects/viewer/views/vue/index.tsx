@@ -1,11 +1,11 @@
 import React from "react";
 
-function FormComp () {
+function VueComp () {
     return (
         <div>
-            表单
+          VueComp
         </div>
     )
 }
 
-export default FormComp;
+export default VueComp;

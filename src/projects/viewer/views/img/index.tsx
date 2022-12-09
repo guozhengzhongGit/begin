@@ -1,11 +1,11 @@
 import React from "react";
 
-function FormComp () {
+function ImageComp () {
     return (
         <div>
-            表单
+            img
         </div>
     )
 }
 
-export default FormComp;
+export default ImageComp;
